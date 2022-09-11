@@ -11,7 +11,7 @@ const MyComponent = () => (
     <Appbar.Content title="Title" subtitle={"Subtitle"} />
     <Appbar.Action icon="magnify" onPress={() => {}} />
     <Appbar.Action icon={MORE_ICON} onPress={() => {}} />
-    <Text>From MyComponent</Text>
+    <Text>From MyComponent updated kjag</Text>
     <Ionicons name="md-checkmark-circle" size={32} color="green" />
   </Appbar.Header>
 );
