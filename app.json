@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "first-app",
+    "owner": "arvindrao",
     "slug": "first-app",
     "version": "1.0.0",
     "orientation": "portrait",
