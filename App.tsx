@@ -1,32 +1,48 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import * as React from 'react';
-import { Provider as PaperProvider } from 'react-native-paper';
+// import * as React from "react";
+import React from "react";
+import { Provider as PaperProvider } from "react-native-paper";
 import MyComponent from "./src/MyComponent";
+import MonstersAPI from "./src/MonstersAPI";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-export default function App() {
-  return (
-    
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-      <MyComponent />
-      {/* <Text fontSize:string="18">Hello</Text> */}
-      <MaterialIcons name="keyboard-arrow-right" size={50} color="blue" />
-      <MaterialIcons name="keyboard-return" size={100} color="red" />
-      <MaterialIcons name="laptop-windows" size={85} color="black" />
-      <MaterialIcons name="library-add" size={100} color="violet" />
-      <Text>Namskara</Text>
-    </View>
-  );
+interface MyProps {
+  msg?: string;
+}
+
+class App extends React.Component<MyProps> {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text
+          style={{
+            textAlign: "center",
+            color: "red",
+            fontWeight: "bold",
+            fontSize: 25,
+            paddingTop: 40,
+          }}
+        >
+          MONSTERS
+        </Text>
+        <MonstersAPI msg="Welcome all monsters" />
+        <StatusBar style="auto" />
+        {/* <MyComponent msg="Hi Arvind" /> */}
+        {/* <Text fontSize:string="18">Hello</Text> */}
+        {/* <MaterialIcons name="keyboard-arrow-right" size={50} color="blue" /> */}
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "dodgerblue",
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
 });
+
+export default App;
