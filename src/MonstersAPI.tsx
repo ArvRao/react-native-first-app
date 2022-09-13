@@ -70,12 +70,10 @@ export default class MonstersAPI extends React.Component<MyProps, MyState> {
       );
   }
 
-  onSearchChange = (event: any) => {
-    const searchField = event.target.value;
+  onSearchChange = (val: string) =>
     this.setState(() => {
-      return { searchField };
+      return { searchField: val };
     });
-  };
 
   render() {
     const { monstersApi, searchField } = this.state;
@@ -90,7 +88,7 @@ export default class MonstersAPI extends React.Component<MyProps, MyState> {
         <TextInput
           //   className="search-box"
           //   type="search"
-          onChange={this.onSearchChange}
+          onChangeText={this.onSearchChange}
           style={styles.input}
           placeholder="search any monster"
         />
@@ -103,6 +101,7 @@ export default class MonstersAPI extends React.Component<MyProps, MyState> {
                 fontWeight: "300",
                 fontSize: 19,
                 textAlign: "center",
+                color: "white",
               }}
             >
               <Text

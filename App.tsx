@@ -18,10 +18,10 @@ class App extends React.Component<MyProps> {
         <Text
           style={{
             textAlign: "center",
-            color: "red",
+            color: "yellow",
             fontWeight: "bold",
-            fontSize: 25,
-            paddingTop: 40,
+            fontSize: 29,
+            paddingTop: 50,
           }}
         >
           MONSTERS
@@ -39,7 +39,7 @@ class App extends React.Component<MyProps> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "rgba(33, 45, 47, 0.97)",
     alignItems: "center",
     // justifyContent: "center",
   },
